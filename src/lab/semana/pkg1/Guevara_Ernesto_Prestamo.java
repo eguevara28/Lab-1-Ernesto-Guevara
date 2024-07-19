@@ -22,15 +22,16 @@ public class Guevara_Ernesto_Prestamo {
         double interes=lea.nextInt()/100;
         double cuotabase=prestamo*interes;
         System.out.println("Ingrese la comision por cuota: ");
-        double comisioncuota=lea.nextDouble();
+        double comisioncuota=lea.nextDouble()/100;
         System.out.println("Ingrese el porcentaje del seguro mensual aplicado a la cuota: ");
         double seguromensual=lea.nextDouble()/100;
         double montoseguromensual=prestamo*seguromensual;
         double cuotamensualtotal=cuotabase+comisioncuota+montoseguromensual;
         double totalpago=cuotamensualtotal*meses;
-        System.out.printf("*** Cuotas Mensuales ***\n");
-        System.out.printf("Cuota de pago mensuales: %.2f",cuotamensualtotal,"\n");
-        System.out.println("");
-        System.out.printf("Pago total: %.2f",totalpago, "\n");
+        System.out.println("*** Cuotas Mensuales ***");
+        System.out.println("Cuota de pago mensuales: ");
+        System.out.println(String.format("%.2f", cuotamensualtotal));
+        System.out.println("Pago total: ");
+        System.out.println(String.format("%.2f", totalpago));
     }
 }
